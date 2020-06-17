@@ -47,7 +47,7 @@ public class EmployeeRepository {
 	/**
 	 * 全件検索で従業員情報を取得する.
 	 * 
-	 * @return 従業員一覧を入社日の降順
+	 * @return 従業員一覧を入社日の降順（存在しなければ0件の従業員一覧）
 	 */
 	public List<Employee> findAll(){
 		String sql = "SELECT id, name, image, gender, hire_date, mail_address, "
@@ -62,7 +62,7 @@ public class EmployeeRepository {
 	 * 主キー検索で従業員情報を取得する.
 	 * 
 	 * @param id 主キー
-	 * @return　主キー検索で得た1行分の情報
+	 * @return　1行分の従業員情報
 	 */
 	public Employee load(Integer id) {
 		String sql = "SELECT id, name, image, gender, hire_date, mail_address, "

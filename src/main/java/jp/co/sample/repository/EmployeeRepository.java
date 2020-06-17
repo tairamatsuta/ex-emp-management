@@ -54,10 +54,6 @@ public class EmployeeRepository {
 				+ "zip_code, address, telephone, salary, characteristics, dependents_count "
 				+ "FROM employees ORDER BY hire_date DESC;";
 		List<Employee> employeeList = template.query(sql, EMPLOYEE_ROW_MAPPER);
-		if(employeeList.size() == 0) {
-//			return (List<Employee>) employeeList.get(0);
-			return null;
-		}
 		return employeeList;
 	}
 	

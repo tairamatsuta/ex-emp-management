@@ -18,9 +18,6 @@ public class Administrator {
 	private String password;
 	
 	
-	/**
-	 * コンストラクタ
-	 */
 	public Administrator() {
 	}
 	

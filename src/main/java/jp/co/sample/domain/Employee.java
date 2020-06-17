@@ -36,9 +36,6 @@ public class Employee {
 	private Integer dependentsCount;
 	
 	
-	/**
-	 * コンストラクタ
-	 */
 	public Employee() {
 	}
 	

@@ -85,6 +85,13 @@ public class AdministratorController {
 		return "administrator/login";
 	}
 	
+	/**
+	 * ログイン処理をする.
+	 * 
+	 * @param form　フォーム
+	 * @param model　リクエストスコープ
+	 * @return 従業員一覧ページ（フォワード）	（管理者情報がnullの場合ログイン画面に遷移） 
+	 */
 	@RequestMapping("/login")
 	public String login(LoginForm form, Model model) {
 		Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());
@@ -94,7 +101,6 @@ public class AdministratorController {
 		}
 		session.setAttribute("administratorName", administrator.getName());
 		return "foward:/employee/showList";
-		
 	}
 	
 }
